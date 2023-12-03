@@ -4,4 +4,9 @@ services:
     image: kazutoiris/connectal:latest # 镜像名称
     volumes:
       - .:/data # 映射 /root 目录
-    network_mode: none # 不连接网络
+    # network_mode: none # 不连接网络
+    user: root
+    tty: true
+
+
+# 进入命令：sudo docker compose up -d && sudo docker exec -it mit6175-connectal-1 /bin/bash
